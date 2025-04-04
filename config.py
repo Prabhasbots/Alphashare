@@ -6,17 +6,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Bot Configuration
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-API_ID = int(os.getenv("API_ID"))
-API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+API_ID = int(os.getenv("API_ID", "26910777"))
+API_HASH = os.getenv("API_HASH", "8601f2f24993f6fdbcbac3bb27ceec38")
 
 # Database Configuration
-MONGO_URI = os.getenv("MONGO_URI")
-DATABASE_NAME = os.getenv("DATABASE_NAME")
+MONGO_URI = os.getenv("MONGO_URI", "")
+DATABASE_NAME = os.getenv("DATABASE_NAME", "")
 
 # Channel Configuration 
-DB_CHANNEL_ID = int(os.getenv("DB_CHANNEL_ID"))
-FORCE_SUB_CHANNEL = int(os.getenv("FORCE_SUB_CHANNEL")) # First force sub channel
+DB_CHANNEL_ID = int(os.getenv("DB_CHANNEL_ID", ""))
+FORCE_SUB_CHANNEL = int(os.getenv("FORCE_SUB_CHANNEL", "")) # First force sub channel
 FORCE_SUB_CHANNEL_2 = int(os.getenv("FORCE_SUB_CHANNEL_2", 0)) # Second force sub channel, defaults to 0 if not set
 
 # Add a second channel link
@@ -24,8 +24,8 @@ CHANNEL_LINK = os.getenv("CHANNEL_LINK") # First channel link
 CHANNEL_LINK_2 = os.getenv("CHANNEL_LINK_2", "") # Second channel link
 
 # Bot Information
-BOT_USERNAME = os.getenv("BOT_USERNAME")
-BOT_NAME = os.getenv("BOT_NAME")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "BAALVEER5_BOT")
+BOT_NAME = os.getenv("BOT_NAME", "Baalveer 5")
 BOT_VERSION = "1.5"
 # Privacy Mode Configuration
 PRIVACY_MODE = os.getenv("PRIVACY_MODE", "off").lower() == "on"
@@ -36,9 +36,9 @@ if not MODIJI_API_KEY:
     print("⚠️ Warning: MODIJI_API_KEY not set in environment variables")
 
 # Links
-CHANNEL_LINK = os.getenv("CHANNEL_LINK")
-DEVELOPER_LINK = os.getenv("DEVELOPER_LINK")
-SUPPORT_LINK = os.getenv("SUPPORT_LINK")
+CHANNEL_LINK = os.getenv("CHANNEL_LINK", "htts://t.me/Baalveer_5_AJ)
+DEVELOPER_LINK = os.getenv("DEVELOPER_LINK", "https://t.me/AJ_TVSERIAL_BOT")
+SUPPORT_LINK = os.getenv("SUPPORT_LINK", "https://t.me/AJ_TVSERIAL")
 
 # For Koyeb/render 
 WEB_SERVER = bool(os.getenv("WEB_SERVER", True)) # make it True if deploying on koyeb/render else False
@@ -48,7 +48,7 @@ PING_TIME = int(os.getenv("PING_TIME")) # Add time_out in seconds
 # Admin IDs - Convert space-separated string to list of integers
 ADMIN_IDS: List[int] = [
     int(admin_id.strip())
-    for admin_id in os.getenv("ADMIN_IDS", "").split()
+    for admin_id in os.getenv("ADMIN_IDS", "5232142502").split()
     if admin_id.strip().isdigit()
 ]
 
@@ -114,9 +114,8 @@ Hello {user_mention}! I'm your secure file sharing assistant.
 • Real-time Tracking
 • Force Subscribe
 
-📢 Join @Thealphabotz for updates!
-👨‍💻 Contact @adarsh2626 for support
-A Open Source Repo :- github.com/utkarshdubey2008/alphashare
+📢 Join @Baalveer_5_AJ for updates!
+👨‍💻 Contact @AJ_TVSERIAL_BOT for support
 
 Use /help to see available commands!
 """
@@ -142,24 +141,21 @@ Use /help to see available commands!
 
 🔗 **Batch System:**  
 • `/batch` - Group multiple files into one link.  
-• Forward files & reply with `/batch`.  
+• Forward files & reply with `/batch`.   
 
-🛠 **Open Source:**  
-🔗 [GitHub](https://github.com/utkarshdubey2008/alphashare)  
-
-⚠️ **Need Help?** Contact [@adarsh2626](https://t.me/adarsh2626)  
+⚠️ **Need Help?** Contact [AJ_TVSERIAL](https://t.me/AJ_TVSERIAL_BOT)  
 """
 
     ABOUT_TEXT = """
 ℹ️ **About {bot_name}**
 
 **Version:** `{version}`
-**Developer:** @adarsh2626
+**Developer:** @AJ_TVSERIAL_BOT
 **Language:** Python
 **Framework:** Pyrogram
 
-📢 **Updates:** @Thealphabotz
-🛠 **Support:** @adarsh2626
+📢 **Updates:** @BAALVEER_5_AJ
+🛠 **Support:** @AJ_TVSERIAL
 
 **Features:**
 • Secure File Sharing
@@ -170,7 +166,7 @@ Use /help to see available commands!
 • Enhanced Security
 • Automatic File Type Detection
 
-Made with ❤️ by @adarsh2626
+Made with ❤️ by @AJ_TVSERIAL
 """
 
     FILE_TEXT = """
